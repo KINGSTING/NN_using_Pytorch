@@ -1,16 +1,25 @@
 # 📝 Short Description of Activity 2
-This activity guided you through the entire machine learning pipeline to build and train a deep neural network for binary classification using PyTorch.
 
-The core goal was to create a Student Pass/Fail Classifier based on synthetic data features (Study Hours and Attendance Rate).
+This activity provided practical mastery over the foundational elements of deep learning using PyTorch.
 
-Key Learning Outcomes:
+1. PyTorch Core Mechanics
 
-    PyTorch Fundamentals: You learned to create and manipulate Tensors and understand Automatic Differentiation (autograd)—the backbone of training neural networks.
+    Tensors & Data Flow: Confirmed Tensors as the universal data structure. Learned to manage input shapes (e.g., y.unsqueeze(1)) and convert NumPy data to torch.FloatTensor for use with the framework.
 
-    Model Architecture: You implemented a multi-layer perceptron (nn.Module subclass) with two hidden layers (ReLU activation) and an output layer (Sigmoid) for binary prediction.
+    Automatic Differentiation (autograd): Understood that loss.backward() and optimizer.step() automate backpropagation by dynamically computing and applying gradients, which is crucial for efficient training.
 
-    Training Pipeline: You defined the Binary Cross-Entropy Loss and the Adam Optimizer and executed a full training loop over 500 epochs using mini-batches (DataLoader).
+2. Model Architecture and Training
 
-    Evaluation and Reflection: You assessed the model's performance using metrics like Accuracy, Precision, and Recall, and visualized the learning process through loss curves and the final Decision Boundary.
+    Network Structure: Successfully built a neural network using nn.Module with two ReLU hidden layers for non-linearity and an output layer suitable for binary classification.
 
-In essence, you successfully took a raw dataset and transformed it into an accurate, fully functional deep learning model using industry-standard tools and practices.
+    Loss Function: Used nn.BCEWithLogitsLoss, which provides numerical stability by combining the Sigmoid activation and the Binary Cross-Entropy loss internally.
+
+    Optimization: Employed the Adam optimizer to efficiently adjust weights based on the calculated gradients, ensuring the model converges to a good minimum.
+
+3. Pipeline Essentials
+
+    Data Scaling: Learned that Min-Max scaling the input features (X) is vital for model stability and accelerating training convergence.
+
+    Evaluation: Recognized that for classification, Accuracy is insufficient. Metrics like Precision, Recall, and F1-Score are necessary to fully assess performance, particularly in imbalanced scenarios.
+
+    Visualization: Confirmed the utility of Loss Curves (to monitor convergence) and the Decision Boundary plot (to visualize the model's learned classification rule in the feature space).
